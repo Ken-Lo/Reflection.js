@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Reflect-o-matic</title>
+<style type="text/css">
+@import url(reflectomatic.css);
+</style>
+
+<script type="text/javascript" src="../reflection.js"></script>
+<script type="text/javascript" src="moo.js"></script>
+</head>
+<body id="b">
+
+<div id="header">
+<h1>Reflect-o-matic</h1>
+<p>Add reflections to images on your webpage using Javascript.</p>
+</div>
+
+<h2 class="tab">Enter URL:</h2>
+<div class="content">
+<p><strong>This is a downloaded version of Reflect-o-matic.</strong></p>
+
+<p>Enter the address to the image you wish to add a reflection to:</p>
+<form action="#" onsubmit="javascript:reflectFromURL(document.getElementById('imageurl').value);return false;">
+<p><input type="text" name="image" id="imageurl" size="40" /> <input type="submit" value="Go!" /></p>
+</form>
+
+<p>If you prefer, <a href="#" onclick="javascript:a.display(1);return false;">search for an image</a> or <a href="#" onclick="javascript:a.display(2);return false;">try using a demo image</a>.</p>
+</div>
+
+<h2 class="tab">Search: To find an image on the internet...</h2>
+<div id="searchc" class="content">
+
+<form action="#" onsubmit="javascript:searchImages(document.getElementById('imagesearch').value);return false;">
+<p><input type="text" id="imagesearch" name="imagesearch" /> <input type="submit"  value="Search" /></p>
+</form>
+
+<script type="text/javascript" src="jsr_class.js"> </script>
+<script type="text/javascript" src="reflectomatic.js"></script>
+
+<div id="searchresults"><p>Please enter a search term; we'll retrieve images for your term and allow you to add reflections to them!</p><p>Ideas: <a href="javascript:searchImages('yosemite')">Yosemite</a>, <a href="javascript:searchImages('penguin')">Penguin</a>, <a href="javascript:searchImages('eiffel tower')">Eiffel Tower</a>, <a href="javascript:searchImages('big ben')">Big Ben</a>, <a href="javascript:searchImages('oxford')">Oxford</a></p></div>
+<script type="text/javascript">var search = new Fx.Slide('searchresults', {duration: 500});</script>
+</div>
+
+<h2 class="tab">Examples: Show me with a few of your photos</h2>
+<div class="content">
+<table><tr>
+<td><a href="#" onclick="javascript:return reflectImage('photos/slurp.jpg');"><img src="photos/slurp_small.jpg" class="reflect" alt="Slurp" /></a></td>
+<td><a href="#" onclick="javascript:return reflectImage('photos/giraffe.jpg')"><img src="photos/giraffe_small.jpg" class="reflect" alt="Giraffe" /></a></td>
+<td><a href="#" onclick="javascript:return reflectImage('photos/flower.jpg')"><img src="photos/flower_small.jpg" class="reflect" alt="Flower" /></a></td>
+<td><a href="#" onclick="javascript:return reflectImage('photos/storm.jpg')"><img src="photos/storm_small.jpg" class="reflect" alt="Run from the Storm" /></a></td>
+<td><a href="#" onclick="javascript:return reflectImage('photos/clearwater2.jpg')"><img src="photos/clearwater2_small.jpg" class="reflect" alt="Sunset at Clearwater Beach II" /></a></td>
+</tr></table>
+</div>
+
+<h2 class="tab">Results</h2>
+<div class="content">
+
+<form action="#" onsubmit="javascript:adjustReflection();return false;">
+<table id="reflectproperties">
+<tr><td colspan="2"><b>Properties</b></th></tr>
+<tr><td>Height:</td><td><input type="text" id="pheight" size="2" value="50" />%</td></tr>
+<tr><td>Opacity:</td><td><input type="text" id="popacity" size="2" value="50" />%</td></tr>
+<tr><td>Width:</td><td><input type="text" id="pwidth" size="4" value="" /> pixels</td></tr>
+<tr><td colspan="2"><input type="submit" value="Update Reflection" /></td></tr>
+</table>
+</form>
+
+<p id="imageresult">
+Please select an image to reflect. You can either <a href="#" onclick="javascript:a.display(0);return false;">enter the address of an image</a>, <a href="#" onclick="javascript:a.display(1);return false;">search for an image</a> or <a href="#" onclick="javascript:a.display(2);return false;">try using a demo image</a>.
+</p>
+
+<p id="imagehtml"></p>
+
+
+</div>
+
+<script type="text/javascript">
+a = new Accordion(document.getElementsByClassName('tab'), document.getElementsByClassName('content'), {opacity: false, height: true, duration: 600});
+</script>
+
+<div id="footer">
+<p><strong>Reflect-o-matic v2.0d:</strong> <a href="bookmarklet.html">Bookmarklet</a></p>
+</div>
+
+</body>
+</html>

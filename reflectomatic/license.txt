@@ -1,0 +1,3 @@
+Reflect-o-matic is subject to the same BSD license as seen in license.txt.
+
+This download includes a copy of mootools.js and jsr_class.js. These are third party scripts which may be subject to different licensing restrictions.

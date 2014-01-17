@@ -1,0 +1,22 @@
+body { background-color: #111; font-family: Calibri, Verdana, Arial, Helvetica, sans-serif; margin: 0; padding:0; }
+img { border: 0; }
+
+#header { height: 55px; padding: 52px 5px 5px 5px; background: url(topbg.gif) repeat-x; margin-bottom: 5px; }
+h1 { color: #fff; font-weight: normal; font-size: 28px; font-family: Georgia; margin: 0 0 0 10px; }
+#header p { color: #aaa; font-family: Georgia; margin: 0 0 0 10px; }
+
+h2.tab { background-color: #51688B; color: #fff; font-family: Georgia; font-size: 13px; margin: 0; padding: 5px 5px 5px 10px; }
+.content { background: #26262C; color: #ddd; margin: 0; padding: 5px 5px 5px 20px; }
+.content td { color: #ddd; }
+.content a { color: #9192AD; }
+
+#searchresults td { vertical-align: top; width: 160px; }
+#searchresults td div { align: center; margin: 0 auto; }
+#searchresults td:hover { background-color: #2B2B2F; }
+
+#reflectproperties { background-color: #383840; display: none; margin-right: -5px; }
+.code { font-family: monospace; }
+
+#footer { background-color: #495F7F; color: #fff; font-family: Georgia; font-size: 13px; padding: 5px; height: 25px; position: fixed; top: 100%; margin-top: -25px; width: 100%; }
+#footer a { color: #ddd; }
+#footer p { margin: 0; }
